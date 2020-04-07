@@ -2,7 +2,10 @@
 This is a repository for the Client application.
 
 ## Clone Repo
-`git clone https://mahran-omairy@bitbucket.org/charlesuniversitydreamteam/client.git`
+`git clone https://github.com/Rinqt/stock.git`
+
+## Navigate to frontend directory
+`cd frontend`
 
 ## Install Dependencies
 `npm install`
