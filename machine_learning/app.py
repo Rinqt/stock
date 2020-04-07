@@ -8,7 +8,7 @@ from sentry_sdk import init, capture_message
 
 
 ml = Flask(__name__)
-init("https://66745e7e535e459cbe0d3cdb5be8a1f9@sentry.io/4409542")
+init(<sentry_connection_string>)
 
 algorithms = \
     {
