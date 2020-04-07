@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire" Version="1.7.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Stock.Application\Stock.Application.csproj" />
+    <ProjectReference Include="..\..\Stock.Persistence\Stock.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FuncSharp">
+      <HintPath>..\..\..\..\FuncSharp\FuncSharp\bin\Debug\netstandard2.0\FuncSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,362 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Jobs\\Stock.Jobs\\Stock.Jobs.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Application\\Stock.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Application\\Stock.Application.csproj",
+        "projectName": "Stock.Application",
+        "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Application\\Stock.Application.csproj",
+        "packagesPath": "C:\\Users\\harun\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\harun\\Azure DevOps\\FuncSharp\\FuncSharp\\bin\\Debug\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Domain\\Stock.Domain.csproj": {
+                "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Domain\\Stock.Domain.csproj"
+              },
+              "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Utilities\\Stock.Utilities.csproj": {
+                "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Utilities\\Stock.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AWSSDK.CognitoIdentityProvider": {
+              "target": "Package",
+              "version": "[3.3.108.7, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Domain\\Stock.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Domain\\Stock.Domain.csproj",
+        "projectName": "Stock.Domain",
+        "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Domain\\Stock.Domain.csproj",
+        "packagesPath": "C:\\Users\\harun\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\harun\\Azure DevOps\\FuncSharp\\FuncSharp\\bin\\Debug\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Utilities\\Stock.Utilities.csproj": {
+                "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Utilities\\Stock.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Utilities\\Stock.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Utilities\\Stock.Utilities.csproj",
+        "projectName": "Stock.Utilities",
+        "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Utilities\\Stock.Utilities.csproj",
+        "packagesPath": "C:\\Users\\harun\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\harun\\Azure DevOps\\FuncSharp\\FuncSharp\\bin\\Debug\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "CodingUpAStorm.VaderSharp": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Jobs\\Stock.Jobs\\Stock.Jobs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Jobs\\Stock.Jobs\\Stock.Jobs.csproj",
+        "projectName": "Stock.Jobs",
+        "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Jobs\\Stock.Jobs\\Stock.Jobs.csproj",
+        "packagesPath": "C:\\Users\\harun\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Jobs\\Stock.Jobs\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\harun\\Azure DevOps\\FuncSharp\\FuncSharp\\bin\\Debug\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Application\\Stock.Application.csproj": {
+                "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Application\\Stock.Application.csproj"
+              },
+              "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Stock.Persistence\\Stock.Persistence.csproj": {
+                "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Stock.Persistence\\Stock.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Stock.Persistence\\Stock.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Stock.Persistence\\Stock.Persistence.csproj",
+        "projectName": "Stock.Persistence",
+        "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Stock.Persistence\\Stock.Persistence.csproj",
+        "packagesPath": "C:\\Users\\harun\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Infrastructure\\Stock.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\harun\\Azure DevOps\\FuncSharp\\FuncSharp\\bin\\Debug\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Application\\Stock.Application.csproj": {
+                "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Application\\Stock.Application.csproj"
+              },
+              "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Domain\\Stock.Domain.csproj": {
+                "projectPath": "C:\\Users\\harun\\OneDrive\\Desktop\\stock.cs\\Core\\Stock.Domain\\Stock.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

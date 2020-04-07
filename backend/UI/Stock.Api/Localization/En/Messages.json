@@ -1,0 +1,8 @@
+{
+  "DuplicateEmail": "User with provided email already exists.",
+  "DuplicateModel": "Model with the same {thing} already exists or is scheduled for building.",
+  "MapperError": "Mapper not initialized. Use overloaded base controller constructor.",
+  "TokenError": "Access or Id token undefined.",
+  "ScheduledBuild": "Your model is scheduled for building. Building will start in {minutes} minutes.",
+  "InvalidCoproduct": "Invalid coproduct value handling."
+}

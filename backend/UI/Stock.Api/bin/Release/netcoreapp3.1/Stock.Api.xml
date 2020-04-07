@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Stock.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Stock.Api.Controllers.AuthController.ChangePassword(Stock.Api.Models.Dtos.Auth.ChangePasswordRequest)">
+            <summary>
+            Requires access token.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.AuthController.SignOut">
+            <summary>
+            Requires access token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.MlModelsController.Add(Stock.Api.Models.Dtos.MlModels.AddModelRequest)">
+            <summary>
+            Requires access token.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.MlModelsController.Get(System.Guid)">
+            <summary>
+            Requires access token.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.MlModelsController.GetAll">
+            <summary>
+            Requires access token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.MlModelsController.Delete(System.Guid)">
+            <summary>
+            Requires access token.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.UsersController.GetUsersInfo">
+            <summary>
+            Requires access token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.UsersController.GetUsersSettings">
+            <summary>
+            Requires access token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.UsersController.GetUsersSearchHistory">
+            <summary>
+            Requires access token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.UsersController.UpdateUsersInfo(Stock.Api.Models.Dtos.Users.UsersBasicInfo)">
+            <summary>
+            Requires access token.
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.UsersController.UpdateUsersSettings(Stock.Api.Models.Dtos.Users.UsersBasicSettings)">
+            <summary>
+            Requires access token.
+            </summary>
+            <param name="settings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.UsersController.UpdateUsersSearchHistory(Stock.Api.Models.Dtos.Users.UsersBasicSearchHistory)">
+            <summary>
+            Requires access token.
+            </summary>
+            <param name="history"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Stock.Api.Controllers.UsersController.Delete">
+            <summary>
+            Requires access token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Stock.Api.Http.Headers.AccessToken">
+            <summary>
+            Used for authorization.
+            </summary>
+        </member>
+        <member name="P:Stock.Api.Http.Headers.IdToken">
+            <summary>
+            Used for authentication.
+            Cognito specific.
+            </summary>
+        </member>
+    </members>
+</doc>

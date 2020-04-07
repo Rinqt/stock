@@ -1,0 +1,16 @@
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\bin\Release\netcoreapp3.1\Stock.Application.deps.json
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\bin\Release\netcoreapp3.1\Stock.Application.dll
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\bin\Release\netcoreapp3.1\Stock.Application.pdb
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\bin\Release\netcoreapp3.1\FuncSharp.dll
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\bin\Release\netcoreapp3.1\Stock.Domain.dll
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\bin\Release\netcoreapp3.1\Stock.Utilities.dll
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\bin\Release\netcoreapp3.1\Stock.Domain.pdb
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\bin\Release\netcoreapp3.1\Stock.Utilities.pdb
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\bin\Release\netcoreapp3.1\FuncSharp.pdb
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\obj\Release\netcoreapp3.1\Stock.Application.csprojAssemblyReference.cache
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\obj\Release\netcoreapp3.1\Stock.Application.csproj.CoreCompileInputs.cache
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\obj\Release\netcoreapp3.1\Stock.Application.AssemblyInfoInputs.cache
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\obj\Release\netcoreapp3.1\Stock.Application.AssemblyInfo.cs
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\obj\Release\netcoreapp3.1\Stock.Application.csproj.CopyComplete
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\obj\Release\netcoreapp3.1\Stock.Application.dll
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Application\obj\Release\netcoreapp3.1\Stock.Application.pdb

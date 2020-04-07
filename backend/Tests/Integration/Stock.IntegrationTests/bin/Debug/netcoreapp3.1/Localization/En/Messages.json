@@ -1,0 +1,5 @@
+{
+  "Test": "My name is Harun.",
+  "Test1": "My name is {name}.",
+  "Test2": "My name is {name} and I am {age} years old."
+}

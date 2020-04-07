@@ -1,0 +1,11 @@
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\bin\Debug\netcoreapp3.1\Stock.Utilities.deps.json
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\bin\Debug\netcoreapp3.1\Stock.Utilities.dll
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\bin\Debug\netcoreapp3.1\Stock.Utilities.pdb
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\bin\Debug\netcoreapp3.1\FuncSharp.dll
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\bin\Debug\netcoreapp3.1\FuncSharp.pdb
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\obj\Debug\netcoreapp3.1\Stock.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\obj\Debug\netcoreapp3.1\Stock.Utilities.AssemblyInfoInputs.cache
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\obj\Debug\netcoreapp3.1\Stock.Utilities.AssemblyInfo.cs
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\obj\Debug\netcoreapp3.1\Stock.Utilities.csproj.CopyComplete
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\obj\Debug\netcoreapp3.1\Stock.Utilities.dll
+C:\Users\harun\source\repos\stock.cs\Core\Stock.Utilities\obj\Debug\netcoreapp3.1\Stock.Utilities.pdb

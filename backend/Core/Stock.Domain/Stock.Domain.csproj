@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.6.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.10.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stock.Utilities\Stock.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FuncSharp">
+      <HintPath>..\..\..\..\..\source\repos\FuncSharp\FuncSharp\bin\Debug\netstandard2.0\FuncSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

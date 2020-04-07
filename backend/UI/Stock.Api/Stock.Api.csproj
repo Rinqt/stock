@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\harun\source\repos\stock.be\UI\Stock.Api\Stock.Api.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Stock.Api.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Stock.Api.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="AWSSDK.CognitoIdentityProvider" Version="3.3.108.7" />
+    <PackageReference Include="Hangfire" Version="1.7.9" />
+    <PackageReference Include="Hangfire.Heartbeat" Version="0.5.0" />
+    <PackageReference Include="HangFire.Mongo" Version="0.6.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Sentry" Version="2.1.0" />
+    <PackageReference Include="Sentry.Serilog" Version="2.1.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Stock.Application\Stock.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Components\Stock.Components.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Jobs\Stock.Jobs\Stock.Jobs.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Stock.Persistence\Stock.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FuncSharp">
+      <HintPath>..\..\..\..\..\source\repos\FuncSharp\FuncSharp\bin\Debug\netstandard2.0\FuncSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Localization\Cz\Messages.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Localization\En\Messages.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+
+</Project>
