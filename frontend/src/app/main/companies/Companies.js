@@ -8,18 +8,18 @@ import { checkLoggedin } from "../../api/login.api";
 import { getInfo, getSettings } from "../../api/user.api";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as Sentry from '@sentry/browser';
+import * as Sentry from "@sentry/browser";
 
-const styles = theme => ({
-  layoutRoot: {}
+const styles = (theme) => ({
+  layoutRoot: {},
 });
 
 class Companies extends Component {
   state = {
     favoriteCompanies: [],
-    companies: []
+    companies: [],
   };
-  setFilter = $event => {
+  setFilter = ($event) => {
     this.setState({ filter: $event.target.value });
   };
 
@@ -29,7 +29,7 @@ class Companies extends Component {
       userSettings,
       companies,
       getUserInfo,
-      getUserSettings
+      getUserSettings,
     } = this.props;
     let companiesList = companies ? [...companies] : [];
 
@@ -37,18 +37,18 @@ class Companies extends Component {
       getUserInfo();
       getUserSettings();
 
-      // Keys are in different order, check each symbol
-      for (let fav = 0; fav < userSettings.favoriteCompanies.length; fav++) {
-        companiesList = companiesList.filter(
-          el => el.symbol !== userSettings.favoriteCompanies[fav].symbol
-        );
-      }
+      // // Keys are in different order, check each symbol
+      // for (let fav = 0; fav < userSettings.favoriteCompanies.length; fav++) {
+      //   companiesList = companiesList.filter(
+      //     el => el.symbol !== userSettings.favoriteCompanies[fav].symbol
+      //   );
+      // }
 
       this.setState({
-        favoriteCompanies: userSettings.favoriteCompanies
-          ? [...userSettings.favoriteCompanies]
-          : [],
-        companies: [...companiesList]
+        // favoriteCompanies: userSettings.favoriteCompanies
+        //   ? [...userSettings.favoriteCompanies]
+        //   : [],
+        companies: [...companiesList],
       });
     }
   }
@@ -58,7 +58,7 @@ class Companies extends Component {
       userSettings,
       companies,
       getUserInfo,
-      getUserSettings
+      getUserSettings,
     } = this.props;
     let companiesList = companies ? [...companies] : [];
     // guard
@@ -75,18 +75,19 @@ class Companies extends Component {
     if (
       (prevProps.userSettings !== userSettings ||
         prevProps.companies !== companies) &&
-      userSettings.favoriteCompanies && companies
+      userSettings.favoriteCompanies &&
+      companies
     ) {
       // Keys are in different order, check each symbol
       for (let fav = 0; fav < userSettings.favoriteCompanies.length; fav++) {
         companiesList = companiesList.filter(
-          el => el.symbol !== userSettings.favoriteCompanies[fav].symbol
+          (el) => el.symbol !== userSettings.favoriteCompanies[fav].symbol
         );
       }
 
       this.setState({
         favoriteCompanies: userSettings.favoriteCompanies,
-        companies: companiesList
+        companies: companiesList,
       });
     }
   }
@@ -97,21 +98,20 @@ class Companies extends Component {
     checkLoggedin();
   }
 
-   // error log
-   componentDidCatch(error, errorInfo) {
+  // error log
+  componentDidCatch(error, errorInfo) {
     Sentry.withScope((scope) => {
       scope.setExtras(errorInfo);
       Sentry.captureException(error);
-
     });
   }
-  
+
   render() {
     const { classes, locale } = this.props;
     return (
       <FusePageSimple
         classes={{
-          root: classes.layoutRoot
+          root: classes.layoutRoot,
         }}
         content={
           <div className="p-24 w-full">
@@ -157,16 +157,16 @@ function mapStateToProps({ custom }) {
     isLoggedin: custom.login.isLoggedin,
     companies: custom.companies.list,
     userSettings: custom.user.settings,
-    locale: custom.locale.companiesPage
+    locale: custom.locale.companiesPage,
   };
 }
 
-const mapDispatchToProps = dispatch =>
+const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
     {
       checkLoggedin: checkLoggedin,
       getUserInfo: getInfo,
-      getUserSettings: getSettings
+      getUserSettings: getSettings,
     },
     dispatch
   );

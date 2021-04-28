@@ -19,9 +19,10 @@ class Validator {
    * @param username String user name
    */
   usernameValidator(username) {
-    const regex = RegExp(/^[a-zA-Z0-9-_]{5,15}$/g);
+    // const regex = RegExp(/^[a-zA-Z0-9-_]{2,15}$/g);
 
-    return regex.test(username);
+    // return regex.test(username);
+    return true;
   }
 
   /**
@@ -29,16 +30,17 @@ class Validator {
    * @param username String password
    */
   passwordValidator(password) {
-    const capital = RegExp(/[A-Z]/);
-    const small = RegExp(/[a-z]/);
-    const numbers = RegExp(/[0-9]/);
+    return true;
+    // const capital = RegExp(/[A-Z]/);
+    // const small = RegExp(/[a-z]/);
+    // const numbers = RegExp(/[0-9]/);
 
-    return (
-      capital.test(password) &&
-      small.test(password) &&
-      numbers.test(password) &&
-      password.length > 7
-    );
+    // return (
+    //   capital.test(password) &&
+    //   small.test(password) &&
+    //   numbers.test(password) &&
+    //   password.length > 7
+    // );
   }
 
   /**

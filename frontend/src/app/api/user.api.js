@@ -4,7 +4,7 @@ import {
   userInfo,
   userSettings,
   userSettingsUpdate,
-  showMessage
+  showMessage,
 } from "../store/actions";
 
 /**
@@ -17,24 +17,17 @@ export const deleteAccount = () => {
     return;
   }
 
-  const config = {
-    headers: {
-      Authorization: "Bearer " + idToken,
-      AccessToken: accessToken
-    }
-  };
-
   // changed api
-  return dispatch => {
+  return (dispatch) => {
     instance
-      .delete("/users", config)
-      .then(res => {
+      .delete("/users")
+      .then((res) => {
         localStorage.clear();
         setTimeout(() => {
           window.location.reload();
         }, 1000);
       })
-      .catch(er => {
+      .catch((er) => {
         // console.log(er, "");
       });
   };
@@ -44,30 +37,35 @@ export const deleteAccount = () => {
  * load the looged in user information
  */
 export const getInfo = () => {
-  const accessToken = getToken("accessToken");
-  const idToken = getToken("idToken");
-  if (!accessToken || !idToken) {
-    return;
-  }
+  // const accessToken = getToken("accessToken");
+  // const idToken = getToken("idToken");
+  // if (!accessToken || !idToken) {
+  //   return;
+  // }
 
-  const config = {
-    headers: {
-      Authorization: "Bearer " + idToken,
-      AccessToken: accessToken
+  // const config = {
+  //   headers: {
+  //
+  //   },
+  // };
+
+  return (dispatch) => {
+    const temp = {};
+    if (localStorage.getItem("username")) {
+      temp.username = localStorage.getItem("username");
     }
-  };
-
-  return dispatch => {
-    instance
-      .get("users/info", config)
-      .then(res => {
-        //add username to user info
-        res.data.username = localStorage.getItem("username");
-        dispatch(userInfo(res.data));
-      })
-      .catch(er => {
-        // console.log(er, "");
-      });
+    dispatch(userInfo(temp));
+    // dispatch(userInfo(res.data));
+    //   instance
+    //     .get("users/info", config)
+    //     .then((res) => {
+    //       //add username to user info
+    //       res.data.username = localStorage.getItem("username");
+    //       dispatch(userInfo(res.data));
+    //     })
+    //     .catch((er) => {
+    //       // console.log(er, "");
+    //     });
   };
 };
 
@@ -75,28 +73,29 @@ export const getInfo = () => {
  * load logged in user settings such as prefered language and companies
  */
 export const getSettings = () => {
-  const accessToken = getToken("accessToken");
-  const idToken = getToken("idToken");
-  if (!accessToken || !idToken) {
-    return;
-  }
+  // userSettings(res.data)
+  // const accessToken = getToken("accessToken");
+  // const idToken = getToken("idToken");
+  // if (!accessToken || !idToken) {
+  //   return;
+  // }
 
-  const config = {
-    headers: {
-      Authorization: "Bearer " + idToken,
-      AccessToken: accessToken
-    }
-  };
+  // const config = {
+  //   headers: {
+  //
+  //   },
+  // };
 
-  return dispatch => {
-    instance
-      .get("/users/settings", config)
-      .then(res => {
-        dispatch(userSettings(res.data));
-      })
-      .catch(er => {
-        // console.log(er, "");
-      });
+  return (dispatch) => {
+    dispatch(userSettings({}));
+    // instance
+    //   .get("/users/settings", config)
+    //   .then((res) => {
+    //     dispatch(userSettings(res.data));
+    //   })
+    //   .catch((er) => {
+    //     // console.log(er, "");
+    //   });
   };
 };
 
@@ -114,25 +113,18 @@ export const updateSettings = (fav, language) => {
 
   const params = {
     favoriteCompanies: fav,
-    language: language
+    language: language,
   };
 
-  const config = {
-    headers: {
-      Authorization: "Bearer " + idToken,
-      AccessToken: accessToken
-    }
-  };
-
-  return dispatch => {
+  return (dispatch) => {
     dispatch(userSettingsUpdate(true));
     instance
-      .put("users/settings", params, config)
-      .then(res => {
+      .put("users/settings", params)
+      .then((res) => {
         dispatch(userSettingsUpdate(false));
         dispatch(userSettings(res.data));
       })
-      .catch(er => {
+      .catch((er) => {
         dispatch(userSettingsUpdate(false));
 
         let message =
@@ -154,9 +146,9 @@ export const updateSettings = (fav, language) => {
             autoHideDuration: 2000,
             anchorOrigin: {
               vertical: "top",
-              horizontal: "right"
+              horizontal: "right",
             },
-            variant: "error"
+            variant: "error",
           })
         );
       });
@@ -167,43 +159,36 @@ export const updateSettings = (fav, language) => {
  * update user ifnormation
  * @param info Object of user info (first name, last name .. )
  */
-export const updateInfo = info => {
+export const updateInfo = (info) => {
   const accessToken = getToken("accessToken");
   const idToken = getToken("idToken");
   if (!accessToken || !idToken) {
     return;
   }
   const params = {
-    ...info
+    ...info,
   };
 
-  const config = {
-    headers: {
-      Authorization: "Bearer " + idToken,
-      AccessToken: accessToken
-    }
-  };
-
-  return dispatch => {
+  return (dispatch) => {
     dispatch(userSettingsUpdate(true));
     instance
-      .put("users/info", params, config)
-      .then(res => {
+      .put("users/info", params)
+      .then((res) => {
         dispatch(
           showMessage({
             message: "Account was updated!",
             autoHideDuration: 2000,
             anchorOrigin: {
               vertical: "top",
-              horizontal: "right"
+              horizontal: "right",
             },
-            variant: "success"
+            variant: "success",
           })
         );
         dispatch(userInfo(res.data));
         dispatch(userSettingsUpdate(false));
       })
-      .catch(er => {
+      .catch((er) => {
         let message =
           "We are experiencing some issues, please try again later!";
         const errors = [];
@@ -224,9 +209,9 @@ export const updateInfo = info => {
             autoHideDuration: 2000,
             anchorOrigin: {
               vertical: "top",
-              horizontal: "right"
+              horizontal: "right",
             },
-            variant: "error"
+            variant: "error",
           })
         );
       });
@@ -246,35 +231,28 @@ export const updatePassword = (previousPassword, newPassword) => {
   }
   const params = {
     oldPassword: previousPassword,
-    newPassword: newPassword
+    newPassword: newPassword,
   };
 
-  const config = {
-    headers: {
-      Authorization: "Bearer " + idToken,
-      AccessToken: accessToken
-    }
-  };
-
-  return dispatch => {
+  return (dispatch) => {
     dispatch(userSettingsUpdate(true));
     instance
-      .post("auth/change-password", params, config)
-      .then(res => {
+      .post("auth/change-password", params)
+      .then((res) => {
         dispatch(
           showMessage({
             message: "Account was updated!",
             autoHideDuration: 2000,
             anchorOrigin: {
               vertical: "top",
-              horizontal: "right"
+              horizontal: "right",
             },
-            variant: "success"
+            variant: "success",
           })
         );
         dispatch(userInfo(res.data));
       })
-      .catch(er => {
+      .catch((er) => {
         let message =
           "We are experiencing some issues, please try again later!";
         const errors = [];
@@ -294,9 +272,9 @@ export const updatePassword = (previousPassword, newPassword) => {
             autoHideDuration: 2000,
             anchorOrigin: {
               vertical: "top",
-              horizontal: "right"
+              horizontal: "right",
             },
-            variant: "error"
+            variant: "error",
           })
         );
       });

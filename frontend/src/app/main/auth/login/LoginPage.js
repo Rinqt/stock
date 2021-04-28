@@ -7,7 +7,7 @@ import {
   Divider,
   TextField,
   Typography,
-  Tooltip
+  Tooltip,
 } from "@material-ui/core";
 import { darken } from "@material-ui/core/styles/colorManipulator";
 import HelpIcon from "@material-ui/icons/Help";
@@ -22,7 +22,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as Sentry from "@sentry/browser";
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     background:
       "radial-gradient(" +
@@ -30,8 +30,8 @@ const styles = theme => ({
       " 0%, " +
       theme.palette.primary.dark +
       " 80%)",
-    color: theme.palette.primary.dark
-  }
+    color: theme.palette.primary.dark,
+  },
 });
 
 class LoginPage extends Component {
@@ -39,7 +39,7 @@ class LoginPage extends Component {
     username: "",
     password: "",
     usernameError: false,
-    passwordError: false
+    passwordError: false,
   };
 
   constructor(props) {
@@ -47,7 +47,7 @@ class LoginPage extends Component {
     this.validator = new Validator();
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState(
       _.set(
         { ...this.state },
@@ -90,11 +90,7 @@ class LoginPage extends Component {
    */
   canBeSubmitted() {
     const { usernameError, passwordError, username, password } = this.state;
-    return (
-      !(usernameError && passwordError) &&
-      username.length > 5 &&
-      password.length > 7
-    );
+    return !(usernameError && passwordError);
   }
 
   componentDidUpdate(prevProps) {
@@ -115,7 +111,7 @@ class LoginPage extends Component {
 
   // error log
   componentDidCatch(error, errorInfo) {
-    Sentry.withScope(scope => {
+    Sentry.withScope((scope) => {
       scope.setExtras(errorInfo);
       Sentry.captureException(error);
     });
@@ -143,7 +139,7 @@ class LoginPage extends Component {
                   name="loginForm"
                   noValidate
                   className="flex flex-col justify-center w-full"
-                  onSubmit={event => {
+                  onSubmit={(event) => {
                     event.preventDefault();
                     login(this.state.username, this.state.password);
                   }}
@@ -268,15 +264,15 @@ function mapStateToProps({ custom }) {
     errorMessage: custom.login.error,
     loading: custom.login.loading,
     isLoggedin: custom.login.isLoggedin,
-    locale: custom.locale.loginPage
+    locale: custom.locale.loginPage,
   };
 }
 
-const mapDispatchToProps = dispatch =>
+const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
     {
       login: loginActions.login,
-      checkLoggedin: loginActions.checkLoggedin
+      checkLoggedin: loginActions.checkLoggedin,
     },
     dispatch
   );
