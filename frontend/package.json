@@ -24,7 +24,7 @@
     "google-map-react": "1.1.2",
     "html2canvas": "^1.0.0-rc.5",
     "json-loader": "^0.5.7",
-    "jsonwebtoken": "8.5.0",
+    "jsonwebtoken": "9.0.0",
     "jspdf": "^1.5.3",
     "jss-extend": "6.2.0",
     "jwt-decode": "2.2.0",
